@@ -7,7 +7,7 @@ This project aims to mimic the [Cucumber arround feature](https://github.com/cuc
 ## Example
 
 Given you want to run the same Scenario with multiple screen resolutions it could look like this:
-```
+```php
 ...
   /**
    * @AroundScenario
@@ -32,7 +32,7 @@ Given you want to run the same Scenario with multiple screen resolutions it coul
 Where in the optional parameter of `callBlock()` you can define a suffix to the scenario title
 
 Example output of Behat could be:
-```
+```Cucumber
 ...
   Scenario: Simpler Test [1920]
     Given I am on "http://somehomepage"
@@ -50,7 +50,7 @@ Example output of Behat could be:
 ## Installation
 
 In your `composer.json` add
-```
+```json
 {
     "require": {
         ...
@@ -63,7 +63,7 @@ and update your dependencies
 ## Usage
 
 To activate this extension add this to your `behat.yml`
-```
+```YAML
 default:
   extensions:
     chartinger\Behat\AroundHookExtension\AroundHookExtension: ~

@@ -76,6 +76,10 @@ class AroundHookFeatureTester implements SpecificationTester
       $hookCallResults = $this->hookDispatcher->dispatchScopeHooks($scope);
       foreach ($hookCallResults as $callResult) {
         echo $callResult->getStdOut();
+        if ($callResult->hasException())
+        {
+          throw $callResult->getException();
+        }
       }
       if (count($hookCallResults) == 0)
       {

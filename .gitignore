@@ -1,0 +1,8 @@
+.project
+.buildpath
+.settings
+*.phar
+behat.yml
+composer.lock
+bin
+vendor

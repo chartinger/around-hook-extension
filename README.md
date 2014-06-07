@@ -2,7 +2,7 @@
 
 Around hook support for Behat 3
 
-This project aims to mimic the [Cucumber arround feature](https://github.com/cucumber/cucumber/wiki/Hooks) in Behat 3.x
+This project aims to mimic the [Cucumber around feature](https://github.com/cucumber/cucumber/wiki/Hooks) in Behat 3.x
 
 ## Example
 

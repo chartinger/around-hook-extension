@@ -10,6 +10,7 @@ use Behat\Testwork\Environment\EnvironmentManager;
 use Behat\Testwork\Environment\Environment;
 use Behat\Gherkin\Node\ScenarioInterface;
 use Behat\Gherkin\Node\FeatureNode;
+use Behat\Gherkin\Node\ScenarioNode;
 class AroundHookScenarioBlock implements ScenarioBlock 
 {
   private $calls;
@@ -35,10 +36,14 @@ class AroundHookScenarioBlock implements ScenarioBlock
     $this->skip = $skip;
   }
 
-  public function call()
+  public function call($suffix = null)
   {
     $this->calls++;
     $scenario = $this->scenario;
+    if (isset($suffix))
+    {
+      $scenario = new ScenarioNode($scenario->getTitle().$suffix, $scenario->getTags(), $scenario->getSteps(), $scenario->getKeyword(), $scenario->getLine());
+    }
     $feature = $this->feature;
     $skip = $this->skip;
     

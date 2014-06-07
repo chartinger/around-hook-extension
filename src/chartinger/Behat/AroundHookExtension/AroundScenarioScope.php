@@ -66,8 +66,8 @@ class AroundScenarioScope implements ScenarioScope
     return $this->block;
   }
   
-  public function callBlock()
+  public function callBlock($suffix = null)
   {
-    $this->block->call();
+    $this->block->call($suffix);
   }
 }

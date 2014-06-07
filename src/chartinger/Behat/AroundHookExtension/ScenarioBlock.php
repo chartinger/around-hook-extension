@@ -3,5 +3,5 @@ namespace chartinger\Behat\AroundHookExtension;
 
 interface ScenarioBlock
 {
-   public function call();
+   public function call($suffix = null);
 }
